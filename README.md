@@ -9,6 +9,8 @@
 
 ## Naklonovanie tohto repozitára
 
+Spusti príkaz `git clone https://github.com/alicak/czechitas-cloud-deployment.git`.
+
 <a name="prostredie"></a>
 
 ## Prostredie pre praktické ukážky
@@ -65,17 +67,17 @@ Potrebné kroky:
 
 Na zmenu adresára, v ktorom sa nachádzame, používame príkaz `cd`.
 
-cd .. - presuň ma do adresára o úroveň vyššie
+`cd ..` - presuň ma do adresára o úroveň vyššie
 
-cd demo3-pods - presuň ma do adresára demo3-pods (ktorý sa nachádza v mojom súčasnom adresári)
+`cd demo3-pods` - presuň ma do adresára demo3-pods (ktorý sa nachádza v mojom súčasnom adresári)
 
-Príklad 1:
+*Príklad 1:*
 
 Nachádzam sa v adresári `[nieco]/czechitas-cloud-deployment/demo2-docker`. 
 
 Ak zadám príkaz `cd ..`, presuniem sa do adresára `[nieco]/czechitas-cloud-deployment` (o jeden vyššie).
 
-Príklad 2:
+*Príklad 2:*
 
 Nachádzam sa v adresári `[nieco]/czechitas-cloud-deployment`.
 
@@ -85,4 +87,46 @@ Ak zadám príkaz `cd demo3-pods`, presuniem sa do adresára `[nieco]/czechitas-
 
 ## Čo keď mi vyprší prostredie na Katacode?
 
-TODO
+Nemalo by sa to stať, ale keby náhodou... 
+
+1. Refreshni stránku s Katacodou.
+
+2. Znovu urob kroky 2 a 3 z [návodu vyššie](#prostredie) (klik na "Start scenario" a "launch.sh").
+
+3. Znovu si naklonuj tento repozitár (`git clone https://github.com/alicak/czechitas-cloud-deployment.git`). 
+
+4. Prejdi do adresára s aktuálnym demom (`cd czechitas-cloud-deployment/[nazov adresara s demom]`)
+
+Ak sa to stane počas iného dema než 5, 7 alebo 8, tak to je všetko. 
+
+Inak ešte k tomu spusti aj príkazy podľa inštrukcií nižšie. 
+
+**Počas dema 5**:
+
+Potrebujeme znovu vyrobiť deployment z dema 4.
+
+1. `cd ../demo4-deployments`
+2. `kubectl apply -f numbers-deployment.yaml`
+3. `cd ../demo5-deployments2`
+
+**Počas dema 7**:
+
+Potrebujeme znovu vyrobiť deployment z dema 5 a prípadne aj service, ktorú sme vyrobili v tomto deme.
+
+1. `cd ../demo5-deployments2`
+2. `kubectl apply -f auth-deployment.yaml`
+3. `cd ../demo7-services`
+4. Ak sme už vyrábali v tomto deme service auth-service, tak aj `kubectl apply -f auth-service.yaml`
+
+**Počas dema 8**:
+
+Potrebujeme znovu vyrobiť deploymenty z dema 5 a dema 7 a service z dema 7.
+
+1. `cd ../demo5-deployments2`
+2. `kubectl apply -f auth-deployment.yaml`
+3. `cd ../demo7-services`
+4. `kubectl apply -f auth-service.yaml`
+5. `kubectl apply -f numbers-deployment-2.yaml`
+6. `cd ../demo8-services2`
+
+
