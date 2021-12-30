@@ -105,30 +105,23 @@ Inak ešte k tomu spusti aj príkazy podľa inštrukcií nižšie.
 
 **Počas dema 5**:
 
-Potrebujeme znovu vyrobiť deployment z dema 4.
-
-1. `cd ../demo4-deployments`
-2. `kubectl apply -f numbers-deployment.yaml`
+Spusti príkazy: 
+1. `cd ../skripty-vyprsane-prostredie`
+2. `/bin/sh ./demo5.sh`
 3. `cd ../demo5-deployments2`
 
 **Počas dema 7**:
 
-Potrebujeme znovu vyrobiť deployment z dema 5 a prípadne aj service, ktorú sme vyrobili v tomto deme.
-
-1. `cd ../demo5-deployments2`
-2. `kubectl apply -f auth-deployment.yaml`
+Spusti príkazy: 
+1. `cd ../skripty-vyprsane-prostredie`
+2. Ak sme už vyrábali v tomto deme service auth-service, tak `/bin/sh ./demo7-so-service.sh`. Inak `/bin/sh ./demo7-bez-service.sh`
 3. `cd ../demo7-services`
-4. Ak sme už vyrábali v tomto deme service auth-service, tak aj `kubectl apply -f auth-service.yaml`
 
 **Počas dema 8**:
 
-Potrebujeme znovu vyrobiť deploymenty z dema 5 a dema 7 a service z dema 7.
-
-1. `cd ../demo5-deployments2`
-2. `kubectl apply -f auth-deployment.yaml`
-3. `cd ../demo7-services`
-4. `kubectl apply -f auth-service.yaml`
-5. `kubectl apply -f numbers-deployment-2.yaml`
-6. `cd ../demo8-services2`
+Spusti príkazy: 
+1. `cd ../skripty-vyprsane-prostredie`
+2. `/bin/sh ./demo8.sh`
+3. `cd ../demo8-services2`
 
 
