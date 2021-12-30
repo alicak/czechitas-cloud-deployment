@@ -1,0 +1,5 @@
+kubectl apply -f auth-service.yaml
+
+kubectl port-forward service/auth-service --address 0.0.0.0 8080:5678
+
+kubectl apply -f numbers-deployment-2.yaml

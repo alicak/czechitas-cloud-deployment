@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: numbers-pod-1
+  labels:
+    app: numbers-generator
+spec:
+  containers:
+  - name: numbers
+    image: alica/numbers:1
+    ports:
+    - containerPort: 1234

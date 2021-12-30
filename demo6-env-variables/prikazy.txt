@@ -1,0 +1,3 @@
+kubectl apply -f env-var-pod.yaml
+
+kubectl exec env-var-pod -it -- printenv

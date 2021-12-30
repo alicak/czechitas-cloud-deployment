@@ -1,0 +1,3 @@
+kubectl apply -f numbers-service.yaml
+
+kubectl port-forward service/numbers-service --address 0.0.0.0 8080:6789

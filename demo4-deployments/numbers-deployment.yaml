@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: numbers-deployment
+  labels:
+    app: numbers-generator
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: numbers-generator
+  template:
+    metadata:
+      labels:
+        app: numbers-generator
+    spec:
+      containers:
+      - name: numbers
+        image: alica/numbers:1
+        ports:
+        - containerPort: 1234

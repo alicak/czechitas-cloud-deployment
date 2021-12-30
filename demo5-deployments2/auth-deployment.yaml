@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-deployment
+  labels:
+    app: authorization
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: authorization
+  template:
+    metadata:
+      labels:
+        app: authorization
+    spec:
+      containers:
+      - name: authorization
+        image: alica/authorization:1
+        ports:
+        - containerPort: 2345

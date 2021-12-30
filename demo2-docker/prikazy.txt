@@ -1,0 +1,7 @@
+# spustit v zlozke HelloWorld
+docker build -t hello-world .
+docker run hello-world
+
+# spustit v zlozke NumbersGenerator
+docker build -t numbers .
+docker run -p 8080:1234 numbers
