@@ -87,6 +87,8 @@ Ak zadám príkaz `cd demo3-pods`, presuniem sa do adresára `[nieco]/czechitas-
 
 ## Čo keď mi vyprší prostredie na Katacode?
 
+![image](images/expirovane-prostredie.png)
+
 Nemalo by sa to stať, ale keby náhodou... 
 
 1. Refreshni stránku s Katacodou.
