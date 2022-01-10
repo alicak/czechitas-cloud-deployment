@@ -9,7 +9,7 @@
 
 ## Naklonovanie tohto repozitára
 
-Spusti príkaz `git clone https://github.com/alicak/czechitas-cloud-deployment.git`.
+V prostredí Katacoda (info nižšie) spusti príkaz `git clone https://github.com/alicak/czechitas-cloud-deployment.git`.
 
 <a name="prostredie"></a>
 
