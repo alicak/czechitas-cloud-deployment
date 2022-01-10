@@ -1,3 +1,5 @@
 kubectl apply -f numbers-pod.yaml
 
 kubectl port-forward numbers-pod-1 --address 0.0.0.0 8080:1234
+
+http://localhost:8080/numbers/random

@@ -6,6 +6,5 @@ spec:
   selector:
     app: authorization
   ports:
-    - protocol: TCP
-      port: 5678
+    - port: 5678
       targetPort: 2345

@@ -1,3 +1,4 @@
 kubectl apply -f env-var-pod.yaml
 
-kubectl exec env-var-pod -it -- printenv
+kubectl logs env-var-pod
+kubectl logs env-var-pod | grep CZECHITAS

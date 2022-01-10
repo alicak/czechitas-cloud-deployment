@@ -6,6 +6,5 @@ spec:
   selector:
     app: numbers-generator
   ports:
-    - protocol: TCP
-      port: 6789
+    - port: 6789
       targetPort: 1234

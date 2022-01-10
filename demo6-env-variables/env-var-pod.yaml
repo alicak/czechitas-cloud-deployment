@@ -8,4 +8,6 @@ spec:
     image: nginx
     env:
     - name: SIDLO_CZECHITAS
-      value: 'Václavské náměstí 837/11'
+      value: "Václavské náměstí 837/11"
+    command:
+    - "printenv"

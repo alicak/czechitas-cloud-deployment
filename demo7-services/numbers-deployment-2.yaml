@@ -17,9 +17,8 @@ spec:
       containers:
       - name: numbers
         image: alica/numbers:1
-        imagePullPolicy: Always
         ports:
         - containerPort: 1234
         env:
         - name: AUTH_ADDRESS
-          value: ???
+          value: http://???
